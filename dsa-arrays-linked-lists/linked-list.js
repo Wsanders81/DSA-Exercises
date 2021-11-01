@@ -1,11 +1,11 @@
 /** Node: node for a singly linked list. */
 
-class Node {
-  constructor(val) {
-    this.val = val;
-    this.next = null;
-  }
-}
+// class Node {
+//   constructor(val) {
+//     this.val = val;
+//     this.next = null;
+//   }
+// }
 
 /** LinkedList: chained together nodes. */
 
@@ -18,7 +18,7 @@ class LinkedList {
       this.push(val) 
       
     };
-    console.log(this.length)
+    
     
   }
     
@@ -227,7 +227,8 @@ class LinkedList {
   }
   
 }
+// let list = new LinkedList([1,2,3,4])
+// console.log(list)
 
 
-
-module.exports = LinkedList;
+// module.exports = LinkedList;

@@ -42,8 +42,7 @@ class Stack {
     try {
       if(!this.size) throw new Error("Nothing here!")
       const returnVal = this.first.val
-      // let nextNode = this.first.next; 
-      // nextNode.prev = null; 
+       
       this.first = this.first.next
       
       this.size -= 1; 
@@ -55,7 +54,6 @@ class Stack {
 
   peek() {
     if(!this.size) return null
-    // if(!this.size) throw new Error("Nothing here!")
     return this.first.val
   }
 
@@ -64,16 +62,38 @@ class Stack {
   isEmpty() {
     return this.size === 0; 
   }
+  reverseString(str){
+    const strArr = Array.from(str)
+    const currentNode = this.first
+    
+    strArr.forEach((l)=>{
+      
+      this.push(l)
+      
+    })
+    while(this.size !== 0){
+      console.log(this.first.val); 
+      this.first = this.first.next; 
+      this.size --; 
+    }
+    
+    
+    
+  }
 }
 
 const s = new Stack()
-s.push(1)
-s.push(2)
-s.push(3)
-// s.pop()
-console.log(s.pop())
+s.reverseString('asdf')
 console.log(s.size)
 console.log(s)
 // console.log(s.isEmpty())
 
-module.exports = Stack;
+// module.exports = Stack;
+
+
+//?? Psuedo code for browser back/forward 
+// First stack would be visited sites in order. 1.google, 2.amazon etc. 
+// each time a site is visited it would be added to the top of the stack. 
+// when hitting back button item is removed from top of stack and added to second stack
+// forward button would remove from top of second stack and add back to first stack
+
